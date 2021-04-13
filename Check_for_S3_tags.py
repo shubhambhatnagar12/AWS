@@ -21,10 +21,10 @@ def lambda_handler(event, context):
         list_of_tags=taglist['TagSet']
         
         for key in list_of_tags:                            #traversing list of tags to search for Environment t
-            if(key['Key']=='Environment')
+            if(key['Key']=='Environment'):
                 flag=1                                      #if tag is found changing value of flag to 1
                 
-        if(flag==0)                                         # tag not found
+        if(flag==0):                                         # tag not found
            s3.delete_bucket(
                Bucket=nameofBucket,
                ExpectedBucketOwner='971082289164'
